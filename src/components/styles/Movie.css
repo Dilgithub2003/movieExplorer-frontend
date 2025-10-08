@@ -1,0 +1,132 @@
+body {
+  background-color: rgb(17, 24, 39);
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Hero Section */
+.section {
+  position: relative;          /* keep it in flow */
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+
+
+/* Hero Content */
+.section-content {
+  position: relative;          /* relative so next section is not overlapped */
+  display: flex;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 9%, rgb(29, 40, 64) 90%);
+}
+.dark{
+  position: relative;
+  gap: 40px;
+  padding: 50px 40px;         /* spacing inside hero */
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0,0.4);
+  z-index: 1;
+}
+/* Left Poster */
+.classSubContainerLeft {
+  width: 205px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Right Content */
+.classSubContainerRight {
+  flex: 1;
+  color: #fff;
+}
+
+.classSubContainerRight h1 {
+  font-size: 22pt;
+  margin: 0 0 10px 0;
+}
+
+.classSubContainerRight p {
+  font-size: 15px;
+  margin: 10px 0 8px 0;
+}
+
+/* Movie Data */
+.movieData {
+  display: flex;
+  gap: 20px;
+  align-items: center; /* horizontally align icons and text */
+  margin: 10px 0;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Genres */
+.genreContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.genreTag {
+  padding: 5px 10px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* Description */
+.movieDiscription {
+  margin: 15px 0;
+}
+
+/* Buttons */
+.btnContainar {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+/* Director */
+.director {
+  margin: 20px 0;
+}
+
+/* Actresses / Main Characters */
+.actress-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 50px; /* space before similar movies */
+}
+
+.actress-card {
+  width: 120px;
+  text-align: center;
+}
+
+.actress-photo {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Similar Movies Section */
+.movie-list {
+  margin-top: 50px; /* space from previous section */
+  position: relative;
+  z-index: 2;
+}

@@ -1,0 +1,8 @@
+.movie-gallery{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footerMargin{
+    margin-bottom: 200px;
+}

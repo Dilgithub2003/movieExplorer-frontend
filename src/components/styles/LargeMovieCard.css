@@ -1,0 +1,58 @@
+.largeMovieCard {
+  position: relative; /* so overlay can sit inside */
+  background-image: url('m1.png');
+  background-size: cover;   /* better than 100% 150% */
+  background-position: center;
+  width: 235px;
+  height: 350px;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: hidden; /* keeps overlay rounded */
+  font-size: 13px;
+}
+
+/* Hidden overlay */
+.largeMovieOverlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(17, 24, 39, 0.91) 85%
+  );
+  opacity: 0.7;               /* invisible by default */
+  transition: opacity 0.3s ease;
+  color: white;             /* text color */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* push text to bottom */
+}
+
+/* Show overlay on hover */
+.largeMovieCard:hover .largeMovieOverlay {
+  opacity: 1;
+}
+.largeMovieCard p{
+    position: absolute;
+    right: 0px;
+    color: aliceblue;
+}
+.largeMovieOverlay div{
+    width: 85%;
+    background-color: blueviolet;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+}
+.largeMovieOverlay h3{
+    padding: 0px 5px 5px 5px;
+}
+.wtList:hover {
+  cursor: pointer;
+  background-color: #6c10b7; /* optional hover color */
+  transform: scale(1.05);   /* optional hover animation */
+}

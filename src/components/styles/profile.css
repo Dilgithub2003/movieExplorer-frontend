@@ -1,0 +1,111 @@
+.profileContainer{
+    display: flex;
+    margin:4% 10% 4% 10%;
+    padding: 10px 30px 20px 0px;
+    background-color: #1F2937;
+    border-radius: 10px;
+}
+.button{
+    background-color: #7E22CE;
+    border-radius: 10px;
+    border: none;
+    width: 20%;
+    height: 40px;
+    font-size: 15px;
+    margin: 15px 0px 0px 0px;
+    color: whitesmoke;
+}
+.avatarSection{
+    width: 15%;
+}
+.userData{
+    width: 85%;
+}
+.userData h5{
+    color: #7f8897;
+}
+.userData h1{
+    color: azure;
+}
+.topic{
+    display: flex;
+    align-items: center;
+}
+.topic h3{
+    padding-left: 10px;
+}
+.moviePreferences h5{
+    margin-top: 10px;
+    color: rgb(192, 205, 216);
+}
+.accountSettings{
+    background-color: #374151;
+    padding: 8px;
+    color: rgb(217, 225, 233);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.passwordReset label{
+    display: block;
+    margin: 10px 0px 10px 0px;
+}
+.passwordReset input{
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    height: 30px;
+    margin: 0px 10px 0px 0px;
+    background-color: #111827;
+}
+
+
+.moviePreferences{
+    background-color: #374151;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 15px;
+}
+.moviePreferences h3{
+    color: white;
+    padding-left: 10px;
+}
+.genreContainer div{
+    background-color: #7E22CE;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 13px;
+    color: aliceblue;
+}
+.genreContainer button{
+    background-color: #7E22CE;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 13px;
+    background-color:#7f8897;
+    border: none;
+}
+.accountActions{
+    background-color: #374151;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 15px 10px 50px 10px;
+}
+.accountActions h3{
+    color: white;
+    padding-left: 10px;
+}
+.accountActions button{
+    display: block;
+    margin:20px 10px 10px 10px;
+    width: 95%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: -20px;
+}
+.checkboxField{
+    margin: 0px 1px 0px 1px ;
+}
+.checkbox{
+    margin: 0px 5px 0px 5px;
+}

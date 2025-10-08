@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.navBar {
+  position: fixed;       /* fixes it at the top */
+  top: 0;                /* top of the viewport */
+  left: 0;               /* full width */
+  width: 100%;
+  background-color: rgb(17, 24, 39); /* same as your site background */
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;         /* ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
+
+
+
+/* To prevent content from being hidden behind navbar */
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 0px;
+    width: 100%;
+    background-color: rgb(17, 24, 39);
+    max-height: 50px;
+    padding-top: 8px;
+    position: sticky;
+}
+.navItemsLeft{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.navItemsRight{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+}
+.navItem{
+    margin: 0px 10px 10px ;
+        color: rgb(255, 255, 255);
+}
+.navBar ul{
+    list-style-type: none;
+}
+.logo{
+    width: 50px;
+    height: auto;
+}
+.searchBox{
+    display: flex;
+    width: auto;
+    height: 20px;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: rgba(67, 65, 95, 0.5);
+    padding: 5px;
+    align-items: center;
+    padding-left: 10px;
+    
+}
+.searchBox input{
+    border: none;
+    background-color: transparent;
+    text-decoration-style: none;
+    margin-left: 5px;
+    color: beige;
+}
+.searchBox input::placeholder {
+  color: #9ca3af;  /* Tailwind gray-400 */
+  opacity: 1;      /* ensure it doesn’t appear faded */
+}
+
+
+/* Link styles */
+.navItem a {
+  color: white;                 /* default white */
+  text-decoration: none;
+  font-size: small;
+  transition: color 0.3s ease;  /* smooth hover effect */
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.navItem a:hover {
+  color: rgb(206, 145, 206); /* hover turns purple */
+}
+.searchBox input:focus {
+  outline: none;   /* makes sure no outline shows */
+  box-shadow: none; /* some browsers add glow, so remove it */
+}
+@media(max-width:640px){
+    .navBar{
+        display: none;
+    }
+    .mobileNavbar ul{
+        background-color:rgb(17, 24, 39) ;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .navItem{
+        margin: 0px 8px 0px 0px;
+        padding: 0px;
+    }
+}
+@media(min-width:640px){
+    .mobileNavbar{
+        display: none;
+    }
+}
+.mobileMenu {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  right: 8px;
+  text-align: right;
+  background: #1f2937;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 15px;
+  z-index: 5;
+}

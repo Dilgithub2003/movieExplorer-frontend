@@ -1,0 +1,104 @@
+/* .login{
+    width: 100%;
+    height: 100%;
+    background-image: url('loginBack.png');
+} */
+.container{
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(17, 24, 39,0.9);
+    min-width: 28vw;
+    max-width: 20vw;
+    padding: 10px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+@media(max-width:740px){
+    .container{
+        width: 90%;
+    }
+}
+.container h1{
+    color: rgb(255, 254, 252);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px 0px 5px 0px;
+    font-size: 28px;
+}
+.container p{
+    color: rgb(178, 174, 170);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    padding: 5px;
+    
+}
+.inputItem{
+    text-align: left;
+    padding: 20px 0px 0px 0px;
+}
+.inputField{
+    padding: 0px 15px 0px 15px;
+}
+
+.inputField p{
+    margin-top: 10px;
+    font-size: 11px;
+}
+.pwdTopic{
+    margin-top: 0px;
+    font-size: 11px;
+}
+.email-input{
+    width: 100%;
+    height: 30px;
+    border-radius: 7px;
+
+}
+
+
+.pwdTopic{
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-btn{
+    width: 100%;
+    height: 35px;
+    margin: 20px 0px 10px 0px;
+    border-radius: 7px;
+    background-color: blueviolet;
+    border: none;
+    color: aliceblue;
+}
+input{
+    background-color:rgba(56, 72, 106, 0.8) ;
+    border: none;
+    padding: 3px;
+}
+.link{
+    color: blueviolet;
+}
+.checkboxField{
+    display: inline;
+
+}
+.checkboxField p{
+    display: inline;
+
+}
+.genresLabel{
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    font-size: 12px;
+    color: rgb(178, 174, 170);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+.checkboxField{
+    color: beige;
+    font-size: small;
+}

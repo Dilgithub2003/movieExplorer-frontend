@@ -1,0 +1,32 @@
+.movie-grid{
+    display: flex;
+    background-color: rgb(17, 24, 39);
+    color: aliceblue;
+width: 100%;
+  gap: 8px;
+  overflow: hidden; /* hide scroll bar */
+  scroll-behavior: smooth;
+  /* padding-left: 40px; */
+}
+.carousel-container{
+    padding:0px 40px 0px 50px;
+}
+.movie-grid > * {
+  flex: 0 0 auto; /* exactly 6 movies per row */
+}
+
+.movie-list{
+    background-color: rgb(17, 24, 39);
+    color: aliceblue;
+    width: 100%;
+
+}
+
+.movie-list h2{
+    padding-left: 20px;
+    margin-top: -30px;
+    color: rgb(185, 185, 181);
+}
+/* .carousel-container{
+
+} */

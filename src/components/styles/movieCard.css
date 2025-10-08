@@ -1,0 +1,60 @@
+.movieCard {
+  position: relative; /* so overlay can sit inside */
+  background-image: url('m1.png');
+  background-size: cover;   /* better than 100% 150% */
+  background-position: center;
+  width: 145px;
+  height: 210px;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: hidden; /* keeps overlay rounded */
+  font-size: 13px;
+}
+
+/* Hidden overlay */
+.movieOverlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(17, 24, 39, 0.91) 85%
+  );
+  opacity: 0;               /* invisible by default */
+  transition: opacity 0.3s ease;
+  color: white;             /* text color */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* push text to bottom */
+}
+
+/* Show overlay on hover */
+.movieCard:hover .movieOverlay {
+  opacity: 1;
+}
+.movieCard p{
+    position: absolute;
+    right: 0px;
+    color: aliceblue;
+}
+
+.movieOverlay h3{
+    padding: 0px 5px 5px 5px;
+}
+.watchlistBtn{
+    width: 85%;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+}
+.watchlistBtn:hover {
+  cursor: pointer;
+  background-color: #7b628f; /* optional hover color */
+  transform: scale(1.05);   /* optional hover animation */
+}
