@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/styles/largeMovieCard.css'
+import '../components/styles/LargeMovieCard.css'
 import { useNavigate } from 'react-router';
 import { setMovieWatchlist } from './api/Api';
 
