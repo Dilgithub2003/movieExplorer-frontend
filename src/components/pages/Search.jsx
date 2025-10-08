@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom';
 import { getMoviesByKeyword } from '../api/Api';
 import { useState,useEffect } from 'react';
-import LargeMovieCards from '../sections/largeMovieCards';
+import LargeMovieCards from '../sections/LargeMovieCards';
 import '../styles/search.css'
 
 function Search() {
