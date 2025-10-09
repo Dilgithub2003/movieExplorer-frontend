@@ -1,85 +1,103 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import './styles/NavBar.css' ;
-import logo from '../assets/logo.png'
+import './styles/NavBar.css';
+import logo from '../assets/logo.png';
 import { CiSearch } from "react-icons/ci";
 import { TbUser } from "react-icons/tb";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from 'react';
-
 
 function NavBar() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-    const [searchQuery, setSearchQuery] = useState("");
-    const navigate = useNavigate();
-    const [isOpen, setIsOpen] = useState(false);
-    const showMobileNavBAr = ()=>{
-        setIsOpen(!isOpen);
-        // window.alert(isOpen)
-    }
-    const handleKeyDown = (e) => {
+  const showMobileNavBAr = () => setIsOpen(!isOpen);
+
+  const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // prevent form submission if inside form
+      e.preventDefault();
       if (searchQuery.trim() !== "") {
-        // Navigate to search page with query param
         navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-            }
-        }
-    };
-
-    const handleSearch = (e)=>{
-        e.preventDefault(); // prevent form submission if inside form
-        if (searchQuery.trim() !== "") {
-        // Navigate to search page with query param
-        navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-        }
+        setIsOpen(false); // close menu if open
+      }
     }
+  };
 
-    return (
-        <>
-        <div className='home'>
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim() !== "") {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setIsOpen(false);
+    }
+  };
+
+  return (
+    <>
+      <div className='home'>
+        {/* Desktop Navbar */}
         <div className='navBar'>
-            <ul className='navItemsLeft'>
-                <li className='navItem'> <Link to = '/'><img className='logo' src={logo}></img></Link> </li>
-                <li className='navItem'> <Link to = '/'>Home</Link> </li>
-                <li className='navItem'> <Link to = '/watchlist'>Watchlist</Link> </li>
-            </ul>
-            <ul className='navItemsRight'>
-                <li className='navItem'>
-                    <div className='searchBox'  onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleKeyDown}>
-                        <div onClick={handleSearch}><CiSearch size={18}  /></div>
-                        <input type='text' placeholder='Search movies...'></input>
-                    </div>
-                 </li>
-                <li className='navItem'> <Link to = '/profile'><div className='userIconCont'><TbUser size={24} /></div></Link> </li>
-            </ul>
+          <ul className='navItemsLeft'>
+            <li className='navItem'><Link to='/'><img className='logo' src={logo} alt="logo" /></Link></li>
+            <li className='navItem'><Link to='/'>Home</Link></li>
+            <li className='navItem'><Link to='/watchlist'>Watchlist</Link></li>
+          </ul>
+
+          <ul className='navItemsRight'>
+            <li className='navItem'>
+              <div className='searchBox'>
+                <input
+                  type='text'
+                  placeholder='Search movies...'
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                />
+                <div onClick={handleSearch}><CiSearch size={18} /></div>
+              </div>
+            </li>
+            <li className='navItem'>
+              <Link to='/profile'><div className='userIconCont'><TbUser size={24} /></div></Link>
+            </li>
+          </ul>
         </div>
+
+        {/* Mobile Navbar */}
         <div className='mobileNavbar'>
-            <ul>
-                <li className='navItem'> <Link to = '/'><img className='logo' src={logo}></img></Link> </li>
-                <li className='navItem'> <Link to = '/search'>
-                    <div className='searchBox'>
-                        <CiSearch size={18}/>
-                        <input type='text' placeholder='Search movies...'></input>
-                    </div>
-                </Link> </li>
-                <li className='navItem' onClick={showMobileNavBAr} > <RxHamburgerMenu size={24} /></li>                
-            </ul>
+          <ul>
+            <li className='navItem'><Link to='/'><img className='logo' src={logo} alt="logo" /></Link></li>
+            <li className='navItem'>
+              <div className='searchBox'>
+                <input
+                  type='text'
+                  placeholder='Search movies...'
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                />                <div onClick={handleSearch}><CiSearch size={18} /></div>
+
+              </div>
+            </li>
+            <li className='navItem' onClick={showMobileNavBAr}><RxHamburgerMenu size={24} /></li>
+          </ul>
         </div>
+
+        {/* Mobile Dropdown Menu */}
         {isOpen && (
-        <ul className='mobileMenu'>
-            <li className='navItem' onClick={showMobileNavBAr}> <div className='userIconCont'><RxHamburgerMenu size={24} color='white'/></div></li>                
-            <hr></hr>
-            <li className='navItem' onClick={showMobileNavBAr}> <Link to = '/'>Home</Link> </li>
-            <hr></hr>
-            <li className='navItem'> <Link to = '/profile'><div className=''>Profile</div></Link> </li>
-            <hr></hr>
-            <li className='navItem'> <Link to = '/watchlist'>Watchlist</Link> </li>
-        </ul>
+          <ul className='mobileMenu'>
+            <li className='navItem' onClick={showMobileNavBAr}>
+              <div className='userIconCont'><RxHamburgerMenu size={24} color='white' /></div>
+            </li>
+            <hr />
+            <li className='navItem' onClick={showMobileNavBAr}><Link to='/'>Home</Link></li>
+            <hr />
+            <li className='navItem' onClick={showMobileNavBAr}><Link to='/profile'>Profile</Link></li>
+            <hr />
+            <li className='navItem' onClick={showMobileNavBAr}><Link to='/watchlist'>Watchlist</Link></li>
+          </ul>
         )}
-        </div>
-        </>
-    );
+      </div>
+    </>
+  );
 }
 
-export default NavBar
+export default NavBar;

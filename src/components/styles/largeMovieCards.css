@@ -1,21 +1,50 @@
-.Large-movie-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-  gap: 6px; /* space between cards */
-  min-height: 60vh;
-}
-
-.Large-carousel-container {
-  padding: 0 20px;
-}
-
 .Large-movie-list {
   background-color: rgb(17, 24, 39);
   color: aliceblue;
   width: 100%;
+  padding-bottom: 40px;
 }
 
+/* Container around the grid */
+.Large-carousel-container {
+  padding: 0 20px;
+}
+
+/* Movie card grid */
+.Large-movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* auto-resize */
+  gap: 16px; /* spacing between cards */
+  min-height: 60vh;
+  justify-items: center; /* center cards in each cell */
+}
+
+/* Optional title */
 .Large-movie-list h2 {
   padding-left: 20px;
   color: rgb(185, 185, 181);
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* For large tablets and smaller (≤1024px) */
+@media (max-width: 1024px) {
+  .Large-movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For tablets (≤768px) */
+@media (max-width: 768px) {
+  .Large-movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For small screens (≤480px) */
+@media (max-width: 480px) {
+  .Large-movie-grid {
+    grid-template-columns: 1fr; /* one card per row */
+    gap: 10px;
+  }
 }

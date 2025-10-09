@@ -76,9 +76,33 @@ hr{
     border-radius: 30px;
     background-color: rgb(56, 54, 56);
     border-color: transparent;
-    margin: 0px 10px 0px 0px;
+    margin: 10px 10px 0px 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:13px;
     color: #fff;
     font-weight: bold;
+}
+@media screen and (max-width:450px){
+  .hero{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .hero-content{
+    width: 100%;
+    margin: px;
+    padding: 0px;
+  }
+  .heroText{
+    width: 100%;
+    padding-right:0px ;
+  }
+  .heroText h1{
+    font-size: 40px;
+  }
+  .heroText p{
+    font-size: 17px;
+    font-weight: 400;
+    padding:0px 70px 0px 0px ;
+  }
 }

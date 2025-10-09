@@ -59,8 +59,8 @@ function Signup() {
 
     return (
         <>
-        <div className="login">
-            <div className="container">
+        <div className="register">
+            <div className="container-reg">
                 <h1>Welcome Back</h1>
                 <p>Sign in to Continue to MovieHub</p>
 
@@ -86,17 +86,19 @@ function Signup() {
 
 
                 <div className="inputField">
-                    <p className='inputItem'>Favorite genres</p>
+                    <p className='inputItem'>Your interest</p>
                 <div className="checkboxField">
-                        <input type='checkbox' name='action' value={28} onChange={handleUserInterest} className="checkbox"/> <p>Action</p>
-                        <input type='checkbox' value={12} onChange={handleUserInterest} className="checkbox"/><p>Adventure</p>
-                        <input type='checkbox' value={16} onChange={handleUserInterest} className="checkbox"/><p>Animation</p>
-                        <input type='checkbox' value={35} onChange={handleUserInterest} className="checkbox"/><p>Comedy</p><br></br>
-                        <input type='checkbox' value={80} onChange={handleUserInterest} className="checkbox"/><p>Crime</p>
-                        <input type='checkbox' value={99} onChange={handleUserInterest} className="checkbox"/><p>Documentary</p>
-                        <input type='checkbox' value={27} onChange={handleUserInterest} className="checkbox"/><p>Horror</p>
-                        <input type='checkbox' value={14} onChange={handleUserInterest} className="checkbox"/><p>Fantasy</p><br/>
-                        <input type='checkbox' value={36} onChange={handleUserInterest} className="checkbox"/><p>History</p>             
+                        <input type='checkbox'  value={"28"} onChange={handleUserInterest} className="checkbox"/> <p>Action</p>
+                        <input type='checkbox' value={"12"} onChange={handleUserInterest} className="checkbox"/><p>Adventure</p>
+                        <input type='checkbox' value={"16"} onChange={handleUserInterest} className="checkbox"/><p>Animation</p>
+
+                        <br></br><br></br>
+                        <input type='checkbox' value={"35"} onChange={handleUserInterest} className="checkbox"/><p>Comedy</p>
+                        <input type='checkbox' value={"80"} onChange={handleUserInterest} className="checkbox"/><p>Crime</p>
+                        <input type='checkbox' value={"99"} onChange={handleUserInterest} className="checkbox"/><p>Documentary</p>
+                        <input type='checkbox' value={"27"} onChange={handleUserInterest} className="checkbox"/><p>Horror</p>
+                        <input type='checkbox' value={"14"} onChange={handleUserInterest} className="checkbox"/><p>Fantasy</p><br/>
+                        <input type='checkbox' value={"36"} onChange={handleUserInterest} className="checkbox"/><p>History</p>             
                 </div>
                 </div>
                 <div className="inputField">

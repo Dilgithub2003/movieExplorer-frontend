@@ -96,17 +96,13 @@ useEffect(() => {
     <>
       <section
         className="section"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      >
+        style={{ backgroundImage: `url(${imageUrl})` }}>
         <div className="section-content">
           <div className="dark">
-          {/* Poster */}
           <div
             className="classSubContainerLeft"
             style={{ backgroundImage: `url(${posterImage})` }}
           ></div>
-
-          {/* Movie Info */}
           <div className="classSubContainerRight">
             <h1>{movie.title}</h1>
             <p style={{ color: "rgba(172, 175, 180, 1)" }}>{movie.original_title}</p>

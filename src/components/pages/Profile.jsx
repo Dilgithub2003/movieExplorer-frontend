@@ -198,55 +198,52 @@ const handleAddGenre =async ()=>{
                 <h5>{user.email}</h5>
                 <div className="accountSettings">
                 <div className="accountSettings">
-  <div className="passwordReset">
-    <div className="topic">
-      <IoLockClosedOutline style={{color:'#7E22CE'}}/>
-      <h3>Account Settings</h3>
-    </div>
+                  <div className="passwordReset">
+                    <div className="topic">
+                      <IoLockClosedOutline style={{color:'#7E22CE'}}/>
+                      <h3>Account Settings</h3>
+                    </div>
 
-    <button
-      className="button"
-      onClick={() => setShowPasswordForm(prev => !prev)}
-    >
-      {showPasswordForm ? "Cancel" : "Change Password"}
-    </button>
+                    <button className="button" onClick={() => setShowPasswordForm(prev => !prev)}>
+                      {showPasswordForm ? "Cancel" : "Change Password"}
+                    </button>
 
-    {showPasswordForm && (
-      <div className="passwordResetForm">
-        <label>Current password</label>
-        <input
-          type='password'
-          name='current'
-          value={passwords.current}
-          onChange={(e) => setPasswords({ ...passwords, current: e.target.value })}
-        />
+                      {showPasswordForm && (
+                        <div className="passwordResetForm">
+                          <label>Current password</label>
+                          <input
+                            type='password'
+                            name='current'
+                            value={passwords.current}
+                            onChange={(e) => setPasswords({ ...passwords, current: e.target.value })}
+                          />
 
-        <label>New password</label>
-        <input
-          type='password'
-          name='newPass'
-          value={passwords.newPass}
-          onChange={(e) => setPasswords({ ...passwords, newPass: e.target.value })}
-        />
+                          <label>New password</label>
+                          <input
+                            type='password'
+                            name='newPass'
+                            value={passwords.newPass}
+                            onChange={(e) => setPasswords({ ...passwords, newPass: e.target.value })}
+                          />
 
-        <label>Confirm new password</label>
-        <input
-          type='password'
-          name='confirmPass'
-          value={passwords.confirmPass}
-          onChange={(e) => setPasswords({ ...passwords, confirmPass: e.target.value })}
-        />
+                            <label>Confirm new password</label>
+                          <input
+                            type='password'
+                            name='confirmPass'
+                            value={passwords.confirmPass}
+                            onChange={(e) => setPasswords({ ...passwords, confirmPass: e.target.value })}
+                          />
 
-        <button
-          className='button'
-          onClick={handlePasswordUpdate}
-        >
-          Reset Password
-        </button>
-      </div>
-    )}
-  </div>
-</div>
+                          <button
+                            className='button'
+                            onClick={handlePasswordUpdate}
+                          >
+                            Reset Password
+                          </button>
+                        </div>
+                       )}
+                      </div>
+                  </div>
 
                 </div>
                 <div className="moviePreferences">

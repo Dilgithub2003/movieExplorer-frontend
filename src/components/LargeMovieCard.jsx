@@ -2,6 +2,8 @@ import React from 'react'
 import '../components/styles/LargeMovieCard.css'
 import { useNavigate } from 'react-router';
 import { setMovieWatchlist } from './api/Api';
+import { toast } from 'react-toastify';
+
 
 function LargeMovieCard({movie}) {
     const key=movie.id
@@ -19,6 +21,7 @@ function LargeMovieCard({movie}) {
   const handleAddToWatchlist = (e) => {
     e.stopPropagation(); //
     setMovieWatchlist(parseInt(movie.id));
+    toast.success("Movie successfully added to watchlist")
   };
     return (
         <>

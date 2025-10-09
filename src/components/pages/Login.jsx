@@ -30,7 +30,7 @@ function Login() {
     return (
         <>
         <div className="login">
-            <div className="container">
+            <div className="container-log">
                 <h1>Welcome Back</h1>
                 <p>Sign in to Continue to MovieHub</p>
                 <div className="inputField">

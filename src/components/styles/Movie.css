@@ -130,3 +130,22 @@ body {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width:450px) {
+  .dark{
+    display: block;
+    margin: 0px;
+    padding: 40px 10px 10px 10px;
+  }
+  .classSubContainerLeft{
+    width: 80%;
+    margin: auto;
+  }
+  .classSubContainerRight p{
+    font-weight: 400;
+    padding: 10px;
+  }
+  .actress-container{
+    margin: auto;
+    margin-left: 50px;
+  }
+}
